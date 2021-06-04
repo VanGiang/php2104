@@ -1,0 +1,155 @@
+/* Begin: common class */
+.font-bold {
+    font-weight: bold;
+}
+/* End: common class */
+
+/*#footer {
+    padding-left: 7%;
+    padding-right: 7%;
+}*/
+
+#footer .branch {
+    background-color: #efefef;
+    padding: 15px 7% 15px 7%;
+}
+
+#footer .branch .branch-title {
+    /*font-weight: bold;*/
+}
+
+#footer .branch .branch-info {
+    display: flex;
+}
+
+#footer .branch .branch-info div {
+    width: 33.33%;
+    border-right: 1px solid #9999;
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+#footer .branch .branch-info div:first-child {
+    padding-left: 0px;
+}
+
+#footer .branch .branch-info div:last-child {
+    border-right: none;
+}
+
+#footer .branch .branch-info div ul {
+    padding: 0px;
+    font-size: 14px;
+}
+
+#footer .branch .branch-info div ul li {
+    list-style: none;
+    line-height: 23px;
+}
+
+#footer .branch .branch-info div ul li .phone {
+    color: #575454;
+}
+
+#footer .branch .branch-info div ul li .phone:hover {
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/*-----------About-------------*/
+
+#footer .about {
+    margin-top: 20px;
+    background-color: #efefef;
+    padding: 15px 7% 15px 7%;
+}
+
+#footer .about .about-info {
+    display: flex;
+}
+
+#footer .about .about-info div {
+    width: 33.33%;
+    border-right: 1px solid #9999;
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+#footer .about .about-info div:first-child {
+    padding-left: 0px;
+}
+
+#footer .about .about-info div:last-child {
+    border-right: none;
+}
+
+#footer .about .about-info .info {
+    display: flex;
+}
+
+#footer .about .about-info .info div {
+    border-right: none;
+}
+
+#footer .about .about-info .info div ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#footer .about .about-info .info div ul li:hover {
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+
+#footer .about .about-info .contact div {
+    border-right: none;
+}
+
+#footer .about .about-info .contact div ul li {
+    display: inline;
+    font-size: 12px;
+}
+
+#footer .about .about-info .contact .social {
+    /*border: 1px solid red;*/
+    width: 100%;
+    padding-top: 7px;
+}
+
+#footer .about .about-info .contact .social ul li {
+    padding: 20px;
+    border: 1px solid #9999;
+    color: #6666;
+}
+
+#footer .about .about-info .contact .social ul li:hover {
+    background: #000;
+    color: white;
+    cursor: pointer;
+}
+
+#footer .about .about-info div ul {
+    padding: 0px;
+    font-size: 14px;
+}
+
+#footer .about .about-info div ul li {
+    list-style: none;
+    line-height: 23px;
+}
+
+#footer .about .about-info div ul li .phone {
+    color: #575454;
+}
+
+#footer .about .about-info div ul li .phone:hover {
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+
