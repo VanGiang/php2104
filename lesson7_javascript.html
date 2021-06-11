@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript</title>
+
+    <script>
+        var x = 0;
+      function increament() {
+        x++;
+
+        var y = 2;
+        var z = 3;
+        var z2 = '3';
+        var result;
+
+
+        switch (x) {
+            case 2:
+                result = 'ok2';
+                break;
+            case 3:
+                result = 'ok3';
+                break;
+            default:
+                result = 'ok';
+        }
+
+        console.log(result);
+
+
+        var text = '';
+
+        // for (i = 0; i < 5; i++) {
+        //   text += "The number is " + i + "<br>";
+        // }
+
+
+
+        var cars = ['BMW', 'Volvo', 'Mini'];
+        console.log(cars.length);
+        var x1;
+
+        // for (x1 of cars) {
+        //   text += x1 + "<br >";
+        // }
+
+        // for (i = 0; i < cars.length ; i++) {
+        //   text += cars[i] + "<br>";
+        // }
+
+
+        var i = 0;
+
+        while (i < 10) {
+          text += "The number is " + i + "<br>";
+          i++;
+          console.log(i);
+        }
+
+
+        var i = 0;
+
+        do {
+          text += "The number is " + i + "<br>";
+          i++;
+          console.log(i);
+        } while (i < 10);
+
+
+
+
+        // todo
+
+        // v1: i = 0, i < 5 dung => text += "The number is 0", i++ => i = 1
+        // v2: i = 1, i < 5 dung => text += "The number is 0, The number is 1", i++ => i = 2
+        // v3: i = 2, i < 5 dung => text += "The number is 0, The number is 1, The number is 2", i++ => i = 3
+        // v3: i = 3, i < 5 dung => text += "The number is 0, The number is 1, The number is 2, The number is 3", i++ => i = 4
+        // v4: i = 4, i < 5 dung => text += "The number is 0, The number is 1, The number is 2, The number is 3, , The number is 4", i++ => i = 5
+        // v5: i = 5, i < 5 sai => thoat for
+
+
+
+
+
+        // phủ định của x==y phải là x!=y chứ nhỉ
+        // !( x == y) => x != y
+
+        // x = 2
+        // y = 2
+        // z1 = 3
+        // z2 = 3
+        // -------
+
+        // !( x == y && z1 == z2) => (x != y || z1 != z2)
+        //         !true              false  || false
+        //         false               false
+
+
+
+
+        // if ((y == 2 && z == 3 && x == 3) || x == 5) {
+        //     window.alert('ok');
+        // }
+        // var x = 5;
+        // var y = 3;
+
+        // x %= y; // chia lay phan du 2
+        // x = x % y;
+
+        // var result = (x == 0) ? 'abc' : 'xxx';
+        var stydentList = [
+            [ 1, 'giang', 'php2104'],
+            [ 2, 'giang', 'php2104'],
+        ];
+
+        text = "<table>"
+            + "<th>"
+                + "<td>stt</td>"
+                + "<td>name</td>"
+                + "<td>class</td>"
+                + "<td>point</td>"
+            + "</th>"
+            + "<tr>"
+                + "<td>1</td>"
+                + "<td>Giang</td>"
+                + "<td>php2104</td>"
+                + "<td>8</td>"
+            + "</tr>"
+            + "<tr>"
+                + "<td>2</td>"
+                + "<td>CP</td>"
+                + "<td>VN</td>"
+                + "<td>10</td>"
+            + "</tr>"
+        + "</table>";
+
+        document.getElementById("demo").innerHTML = text;
+
+
+        // if (x == 0) {
+        //     document.getElementById("demo").innerHTML = 'x chia het cho y';
+        // } else {
+        //     document.getElementById("demo").innerHTML = 'x chia cho y du ' + ;
+        // }
+
+        // window.alert('Changed');
+        // document.write('abc');
+        // console.log('ok');
+      }
+
+      function descreament() {
+        x--;
+
+        document.getElementById("demo").innerHTML = x;
+      }
+
+      // aaa();
+    </script>
+</head>
+<body>
+    <h2>JavaScript in Head</h2>
+
+    <p id="demo">A Paragraph.</p>
+
+
+    <button type="button" onclick="increament()">Increament</button>
+    <button type="button" onclick="descreament()">descreament</button>
+</body>
+</html>

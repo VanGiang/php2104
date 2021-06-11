@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 8 array object</title>
+
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo">A Paragraph.</p>
+    <br>
+
+    <button type="button" onclick="mySort()">Sap xep giam dan</button>
+    <script>
+        // function myFunction() {
+            var xemay = [
+                ['xe1', 100],
+                ['xe2', 200],
+                ['xe3', 800],
+                ['xe4', 400],
+                ['xe5', 500],
+            ];
+
+            xemay.sort();
+
+            var text, i, childArr, j;
+            xemayLen = xemay.length;
+
+            text = "<table>"
+                + "<tr>"
+                    + "<th>Ten</th>"
+                    + "<th>Gia</th>"
+                + "</tr>";
+
+            for (i = 0; i < xemayLen; i++) {
+                // if (xemay[i][1] <= 200) {
+                    text += "<tr>";
+
+                    childArr = xemay[i];
+                    for (j = 0; j < childArr.length; j++) {
+                        text += "<td>" + childArr[j] + "</td>";
+                    }
+
+                    text += "</tr>";
+                // }
+            }
+
+            text += "</table>";
+
+            document.getElementById("demo").innerHTML = text;
+        // }
+
+        function mySort() {
+
+            var sortArr = [];
+            var text, i, childArr, j;
+            var sortObj = {};
+
+            for (i = 0; i < xemayLen; i++) {
+                childArr = xemay[i];
+
+                sortArr.push(childArr[1]);
+                sortObj[childArr[1]] = childArr[0];
+            }
+
+            sortArr.sort(function(a, b){return b - a});
+
+            sortArrLen = sortArr.length;
+
+            text = "<table>"
+                + "<tr>"
+                    + "<th>Ten</th>"
+                    + "<th>Gia</th>"
+                + "</tr>";
+
+            for (i = 0; i < sortArrLen; i++) {
+                text += "<tr>";
+
+                text += "<td>" + sortObj[sortArr[i]] + "</td>";
+                text += "<td>" + sortArr[i] + "</td>";
+
+                text += "</tr>";
+            }
+
+            text += "</table>";
+
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
