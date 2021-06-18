@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript string</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var str = 'Viet nam vo dich, vo dich';
+        var strLower = str.toLowerCase().replace(/ /g,'');
+        console.log(str);
+
+        var dem;
+        var strTmp = ''
+        var result = '';
+
+        for (var i = 0; i < strLower.length; i++) {
+            dem = 1;
+            for (var j = i + 1; j < strLower.length - 1; j++) {
+                if (strTmp.indexOf(strLower[j]) == -1 && strLower[i] == strLower[j]) {
+                    dem++;
+                }
+            }
+
+            if (strTmp.indexOf(strLower[i]) == -1) {
+                result += strLower[i] + ' lap ' + dem + ' lan \n';
+            }
+
+            strTmp += strLower[i];
+        }
+
+        console.log(result);
+
+
+        // for (var i = 0; i < strLower.length; i++) {
+        //     replace(/ /,'')
+        //     indexOf()
+        // }
+    </script>
+</body>
+</html>

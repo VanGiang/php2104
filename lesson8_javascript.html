@@ -27,14 +27,37 @@
 
     <button type="button" onclick="mySort()">Sap xep giam dan</button>
     <script>
+        // const points = [40, 100, 1, 5, 25, 10];
+        // points.sort(function(a, b){return b - a});
+        // console.log(points);
+
         // function myFunction() {
+            var xemay1 = [
+                ['xe1', 100],
+                ['xe2', 200],
+                ['xe3', 800],
+                ['xe6', 400],
+                ['xe5', 500],
+            ];
+
+            console.log(xemay1.sort(function(a, b) {
+                // console.log(a);
+                // console.log(b);
+                // console.log('==========');
+
+                return - a[0] + b[0];
+            }).reverse());
+
+
             var xemay = [
                 ['xe1', 100],
                 ['xe2', 200],
                 ['xe3', 800],
-                ['xe4', 400],
+                ['xe6', 400],
                 ['xe5', 500],
             ];
+
+            // console.log(xemay);
 
             xemay.sort();
 
@@ -48,51 +71,12 @@
                 + "</tr>";
 
             for (i = 0; i < xemayLen; i++) {
-                // if (xemay[i][1] <= 200) {
-                    text += "<tr>";
-
-                    childArr = xemay[i];
-                    for (j = 0; j < childArr.length; j++) {
-                        text += "<td>" + childArr[j] + "</td>";
-                    }
-
-                    text += "</tr>";
-                // }
-            }
-
-            text += "</table>";
-
-            document.getElementById("demo").innerHTML = text;
-        // }
-
-        function mySort() {
-
-            var sortArr = [];
-            var text, i, childArr, j;
-            var sortObj = {};
-
-            for (i = 0; i < xemayLen; i++) {
-                childArr = xemay[i];
-
-                sortArr.push(childArr[1]);
-                sortObj[childArr[1]] = childArr[0];
-            }
-
-            sortArr.sort(function(a, b){return b - a});
-
-            sortArrLen = sortArr.length;
-
-            text = "<table>"
-                + "<tr>"
-                    + "<th>Ten</th>"
-                    + "<th>Gia</th>"
-                + "</tr>";
-
-            for (i = 0; i < sortArrLen; i++) {
                 text += "<tr>";
 
-                text += "<td>" + sortObj[sortArr[i]] + "</td>";
-                text += "<td>" + sortArr[i] + "</td>";
+                childArr = xemay[i];
+                for (j = 0; j < childArr.length; j++) {
+                    text += "<td>" + childArr[j] + "</td>";
+                }
 
                 text += "</tr>";
             }
@@ -100,7 +84,44 @@
             text += "</table>";
 
             document.getElementById("demo").innerHTML = text;
-        }
+        // }
+
+        // function mySort() {
+
+        //     var sortArr = [];
+        //     var text, i, childArr, j;
+        //     var sortObj = {};
+
+        //     for (i = 0; i < xemayLen; i++) {
+        //         childArr = xemay[i];
+
+        //         sortArr.push(childArr[1]);
+        //         sortObj[childArr[1]] = childArr[0];
+        //     }
+
+        //     sortArr.sort(function(a, b){return b - a});
+
+        //     sortArrLen = sortArr.length;
+
+        //     text = "<table>"
+        //         + "<tr>"
+        //             + "<th>Ten</th>"
+        //             + "<th>Gia</th>"
+        //         + "</tr>";
+
+        //     for (i = 0; i < sortArrLen; i++) {
+        //         text += "<tr>";
+
+        //         text += "<td>" + sortObj[sortArr[i]] + "</td>";
+        //         text += "<td>" + sortArr[i] + "</td>";
+
+        //         text += "</tr>";
+        //     }
+
+        //     text += "</table>";
+
+        //     document.getElementById("demo").innerHTML = text;
+        // }
     </script>
 </body>
 </html>
