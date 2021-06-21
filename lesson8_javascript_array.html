@@ -20,6 +20,7 @@
 
 
 <body>
+    <input type="text" name="search" id="search" placeholder="Search" onkeyup="search()">
     <p id="demo"></p>
     <button onclick="sort1()">Sort1</button>
 
@@ -31,32 +32,36 @@
             [4, 'Hoan', 'PHP2103', 10],
         ];
 
-        var studentLen = students.length;
+        showTable(students);
 
-        var text = "<table width='100%'>"
-            + "<tr>"
-                + "<th>No</th>"
-                + "<th>Name</th>"
-                + "<th>Class</th>"
-                + "<th>Point</th>"
-            + "</tr>";
+        function showTable(students) {
+            var studentLen = students.length;
 
-        for (var i = 0; i < studentLen; i++) {
-            text += "<tr>";
+            var text = "<table width='100%'>"
+                + "<tr>"
+                    + "<th>No</th>"
+                    + "<th>Name</th>"
+                    + "<th>Class</th>"
+                    + "<th>Point</th>"
+                + "</tr>";
 
-            childArr = students[i];
-            childArrLen = childArr.length;
+            for (var i = 0; i < studentLen; i++) {
+                text += "<tr>";
 
-            for (var j = 0; j < childArrLen; j++) {
-                text += "<td>" + childArr[j] + "</td>";
+                childArr = students[i];
+                childArrLen = childArr.length;
+
+                for (var j = 0; j < childArrLen; j++) {
+                    text += "<td>" + childArr[j] + "</td>";
+                }
+
+                text += "</tr>";
             }
 
-            text += "</tr>";
+            text += "</table>";
+
+            document.getElementById('demo').innerHTML = text;
         }
-
-        text += "</table>";
-
-        document.getElementById('demo').innerHTML = text;
 
         function sort1() {
             students.sort(function(a, b) {
@@ -79,6 +84,35 @@
             // console.log(xemay.sort(function(a, b) { return b - a; }));
             // console.log(xemay.sort().reverse());
         }
+
+        function search() {
+            var keyword = document.getElementById('search').value;
+            var studentResult = [];
+
+            for (var i = 0; i < students.length; i++) {
+                // students[i] = [1, 'Giang', 'PHP2008', 8],
+                if (students[i].toString().toLowerCase().indexOf(keyword) != -1) {
+                    studentResult.push(students[i]);
+                }
+            }
+
+            showTable(studentResult);
+        }
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
