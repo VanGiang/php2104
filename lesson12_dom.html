@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 12 DOM</title>
+    <style type="text/css">
+        .color-red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo" class="abc"></p>
+    <p class="demo1"></p>
+    <p class="demo1"></p>
+
+    <script type="text/javascript">
+        var elementDemo = document.getElementById('demo');
+        elementDemo.innerHTML = 'PHP2104';
+        elementDemo.style.color = 'red';
+        // elementDemo.class = 'Test';
+        // document.getElementsByClassName('demo1').innerHTML[0] = 'Nguyen Van Giang';
+
+        var test = document.getElementsByClassName('demo1');
+        test[0].innerHTML = 'Nguyen Van Giang';
+    </script>
+</body>
+</html>
